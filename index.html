@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partnership Proposal — Kimball Mueller</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    body { font-family: 'Inter', sans-serif; background: #0f0f11; color: #e8e6e1; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    .grain {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #1a1a20 0%, #141418 100%);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3), 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .offer-a { border-top: 3px solid #c9a96e; }
+    .offer-b { border-top: 3px solid #7b9e87; }
+
+    .tag-a {
+      background: rgba(201,169,110,0.12);
+      color: #c9a96e;
+      border: 1px solid rgba(201,169,110,0.25);
+    }
+    .tag-b {
+      background: rgba(123,158,135,0.12);
+      color: #7b9e87;
+      border: 1px solid rgba(123,158,135,0.25);
+    }
+
+    .tier-row { border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .tier-row:last-child { border-bottom: none; }
+
+    .milestone-dot-a { background: #c9a96e; box-shadow: 0 0 0 4px rgba(201,169,110,0.15); }
+    .milestone-dot-b { background: #7b9e87; box-shadow: 0 0 0 4px rgba(123,158,135,0.15); }
+    .milestone-line { background: rgba(255,255,255,0.08); }
+
+    .equity-bar-bg { background: rgba(123,158,135,0.1); border: 1px solid rgba(123,158,135,0.2); }
+    .equity-bar-fill { background: linear-gradient(90deg, #5a8068, #7b9e87); }
+
+    .divider { border-color: rgba(255,255,255,0.06); }
+
+    .highlight-a { color: #c9a96e; }
+    .highlight-b { color: #7b9e87; }
+
+    .compare-row:nth-child(even) { background: rgba(255,255,255,0.02); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.6s ease forwards; }
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .delay-4 { animation-delay: 0.4s; opacity: 0; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="grain"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
+
+    <!-- Header -->
+    <div class="text-center mb-20 fade-up">
+      <p class="text-xs font-medium tracking-[0.2em] uppercase text-white/30 mb-4">Partnership Proposal</p>
+      <h1 class="text-5xl font-bold text-white mb-4 leading-tight">Kimball Mueller</h1>
+      <p class="text-white/40 text-lg font-light">Business Development & Client Management</p>
+      <div class="mt-8 w-16 h-px bg-white/10 mx-auto"></div>
+    </div>
+
+    <!-- Context -->
+    <div class="card p-8 mb-8 fade-up delay-1">
+      <h2 class="text-xl font-semibold text-white mb-4">The Arrangement</h2>
+      <p class="text-white/55 leading-relaxed text-[15px]">
+        Kimball joins as a business development and client management partner. He sources and manages his own book of clients, earning a revenue share on every dollar that book generates. Two structures are proposed below — one optimized for maximum cash, one for long-term ownership.
+      </p>
+    </div>
+
+    <!-- Two Offers Side Header -->
+    <div class="grid grid-cols-2 gap-6 mb-6 fade-up delay-2">
+      <div>
+        <span class="tag-a text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full">Offer A</span>
+        <h2 class="text-2xl font-bold text-white mt-4 mb-1">Pure Rev Share</h2>
+        <p class="text-white/40 text-sm">No equity. Maximum cash. 90% rate at $40k portfolio.</p>
+      </div>
+      <div>
+        <span class="tag-b text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full">Offer B</span>
+        <h2 class="text-2xl font-bold text-white mt-4 mb-1">Rev Share + Equity</h2>
+        <p class="text-white/40 text-sm">Up to 10% ownership. Starts at 30%, caps at 80% at $100k portfolio.</p>
+      </div>
+    </div>
+
+    <!-- Tier Tables -->
+    <div class="grid grid-cols-2 gap-6 mb-8 fade-up delay-2">
+
+      <!-- Offer A Tiers -->
+      <div class="card offer-a p-6">
+        <p class="text-xs font-semibold text-white/30 tracking-widest uppercase mb-5">Rev Share Tiers</p>
+        <div class="space-y-0">
+          <div class="tier-row flex justify-between items-center py-3">
+            <span class="text-white/50 text-sm">$0 – $10k</span>
+            <span class="text-white font-semibold">55%</span>
+          </div>
+          <div class="tier-row flex justify-between items-center py-3">
+            <span class="text-white/50 text-sm">$10k – $20k</span>
+            <span class="text-white font-semibold">65%</span>
+          </div>
+          <div class="tier-row flex justify-between items-center py-3">
+            <span class="text-white/50 text-sm">$20k – $30k</span>
+            <span class="text-white font-semibold">75%</span>
+          </div>
+          <div class="tier-row flex justify-between items-center py-3">
+            <span class="text-white/50 text-sm">$30k – $40k</span>
+            <span class="text-white font-semibold">85%</span>
+          </div>
+          <div class="flex justify-between items-center py-3">
+            <span class="highlight-a text-sm font-medium">$40k+</span>
+            <span class="highlight-a text-xl font-bold">90%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offer B Tiers -->
+      <div class="card offer-b p-6">
+        <p class="text-xs font-semibold text-white/30 tracking-widest uppercase mb-5">Rev Share + Equity Tiers</p>
+        <div class="space-y-0">
+          <div class="tier-row flex justify-between items-center py-3">
+            <span class="text-white/50 text-sm">$0 – $25k</span>
+            <div class="text-right">
+              <span class="text-white font-semibold">30%</span>
+            </div>
+          </div>
+          <div class="tier-row flex justify-between items-center py-3">
+            <span class="text-white/50 text-sm">$25k – $50k</span>
+            <div class="text-right">
+              <span class="text-white font-semibold">50%</span>
+              <span class="text-[10px] highlight-b ml-2 font-medium">+1.5% equity at $25k</span>
+            </div>
+          </div>
+          <div class="tier-row flex justify-between items-center py-3">
+            <span class="text-white/50 text-sm">$50k – $75k</span>
+            <div class="text-right">
+              <span class="text-white font-semibold">65%</span>
+              <span class="text-[10px] highlight-b ml-2 font-medium">+2.5% equity at $50k</span>
+            </div>
+          </div>
+          <div class="tier-row flex justify-between items-center py-3">
+            <span class="text-white/50 text-sm">$75k – $100k</span>
+            <div class="text-right">
+              <span class="text-white font-semibold">75%</span>
+              <span class="text-[10px] highlight-b ml-2 font-medium">+3.0% equity at $75k</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-center py-3">
+            <div>
+              <span class="highlight-b text-sm font-medium">$100k+</span>
+              <span class="text-[10px] highlight-b ml-2 font-medium">+3.0% equity at $100k</span>
+            </div>
+            <span class="highlight-b text-xl font-bold">80%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journey from Zero -->
+    <div class="card p-8 mb-8 fade-up delay-3">
+      <h2 class="text-xl font-semibold text-white mb-2">The Journey from Zero</h2>
+      <p class="text-white/40 text-sm mb-10">Starting with 1 client (~$3k MRR), building from there.</p>
+
+      <!-- Offer A Timeline -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="tag-a text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full">Offer A</span>
+          <span class="text-white/40 text-xs">Zero to 90% ceiling</span>
+        </div>
+
+        <div class="relative">
+          <!-- Line -->
+          <div class="absolute top-3 left-3 right-3 h-px milestone-line"></div>
+
+          <!-- Dots -->
+          <div class="relative flex justify-between">
+            <!-- M0 -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full milestone-dot-a flex items-center justify-center z-10">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Start</p>
+                <p class="text-white text-xs font-semibold">$3k MRR</p>
+                <p class="highlight-a text-xs">55%</p>
+                <p class="text-white/40 text-[10px]">~$1,650/mo</p>
+              </div>
+            </div>
+            <!-- M3 -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full milestone-dot-a flex items-center justify-center z-10">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Month 3</p>
+                <p class="text-white text-xs font-semibold">$12k MRR</p>
+                <p class="highlight-a text-xs">65%</p>
+                <p class="text-white/40 text-[10px]">~$7,800/mo</p>
+              </div>
+            </div>
+            <!-- M6 -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full milestone-dot-a flex items-center justify-center z-10">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Month 6</p>
+                <p class="text-white text-xs font-semibold">$22k MRR</p>
+                <p class="highlight-a text-xs">75%</p>
+                <p class="text-white/40 text-[10px]">~$16,500/mo</p>
+              </div>
+            </div>
+            <!-- M8 -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full milestone-dot-a flex items-center justify-center z-10">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Month 8</p>
+                <p class="text-white text-xs font-semibold">$33k MRR</p>
+                <p class="highlight-a text-xs">85%</p>
+                <p class="text-white/40 text-[10px]">~$28,050/mo</p>
+              </div>
+            </div>
+            <!-- M10 -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-[#c9a96e] flex items-center justify-center z-10" style="box-shadow: 0 0 0 6px rgba(201,169,110,0.2), 0 0 20px rgba(201,169,110,0.3);">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Month 10</p>
+                <p class="text-white text-xs font-semibold">$42k MRR</p>
+                <p class="highlight-a text-xs font-bold">90% ✓</p>
+                <p class="text-white/40 text-[10px]">~$37,800/mo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offer B Timeline -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <span class="tag-b text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full">Offer B</span>
+          <span class="text-white/40 text-xs">Zero to 90% ceiling + 10% equity</span>
+        </div>
+
+        <div class="relative">
+          <div class="absolute top-3 left-3 right-3 h-px milestone-line"></div>
+          <div class="relative flex justify-between">
+            <!-- Start -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full milestone-dot-b flex items-center justify-center z-10">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Start</p>
+                <p class="text-white text-xs font-semibold">$3k MRR</p>
+                <p class="highlight-b text-xs">30%</p>
+                <p class="text-white/40 text-[10px]">~$900/mo</p>
+                <p class="text-white/20 text-[10px]">0% equity</p>
+              </div>
+            </div>
+            <!-- M6 -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full milestone-dot-b flex items-center justify-center z-10">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Month 6</p>
+                <p class="text-white text-xs font-semibold">$25k MRR</p>
+                <p class="highlight-b text-xs">50%</p>
+                <p class="text-white/40 text-[10px]">~$12,500/mo</p>
+                <p class="highlight-b text-[10px] font-semibold">1.5% equity</p>
+              </div>
+            </div>
+            <!-- M12 -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full milestone-dot-b flex items-center justify-center z-10">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Month 12</p>
+                <p class="text-white text-xs font-semibold">$50k MRR</p>
+                <p class="highlight-b text-xs">65%</p>
+                <p class="text-white/40 text-[10px]">~$32,500/mo</p>
+                <p class="highlight-b text-[10px] font-semibold">4.0% equity</p>
+              </div>
+            </div>
+            <!-- M18 -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full milestone-dot-b flex items-center justify-center z-10">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Month 18</p>
+                <p class="text-white text-xs font-semibold">$75k MRR</p>
+                <p class="highlight-b text-xs">75%</p>
+                <p class="text-white/40 text-[10px]">~$56,250/mo</p>
+                <p class="highlight-b text-[10px] font-semibold">7.0% equity</p>
+              </div>
+            </div>
+            <!-- M24 -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-[#7b9e87] flex items-center justify-center z-10" style="box-shadow: 0 0 0 6px rgba(123,158,135,0.2), 0 0 20px rgba(123,158,135,0.3);">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-white/30 uppercase tracking-wider mb-1">Month 24</p>
+                <p class="text-white text-xs font-semibold">$100k MRR</p>
+                <p class="highlight-b text-xs font-bold">80% ✓</p>
+                <p class="text-white/40 text-[10px]">~$80,000/mo</p>
+                <p class="highlight-b text-[10px] font-bold">10% equity ✓</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equity bar -->
+        <div class="mt-10">
+          <p class="text-[10px] text-white/30 uppercase tracking-widest mb-3">Equity Accumulation</p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] text-white/40 w-16">Month 6</span>
+              <div class="flex-1 equity-bar-bg rounded-full h-2">
+                <div class="equity-bar-fill h-2 rounded-full" style="width: 15%"></div>
+              </div>
+              <span class="text-[11px] highlight-b w-10 text-right">1.5%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] text-white/40 w-16">Month 12</span>
+              <div class="flex-1 equity-bar-bg rounded-full h-2">
+                <div class="equity-bar-fill h-2 rounded-full" style="width: 40%"></div>
+              </div>
+              <span class="text-[11px] highlight-b w-10 text-right">4.0%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] text-white/40 w-16">Month 18</span>
+              <div class="flex-1 equity-bar-bg rounded-full h-2">
+                <div class="equity-bar-fill h-2 rounded-full" style="width: 70%"></div>
+              </div>
+              <span class="text-[11px] highlight-b w-10 text-right">7.0%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] text-white/40 w-16">Month 24</span>
+              <div class="flex-1 equity-bar-bg rounded-full h-2">
+                <div class="equity-bar-fill h-2 rounded-full" style="width: 100%"></div>
+              </div>
+              <span class="text-[11px] highlight-b w-10 text-right font-bold">10.0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison -->
+    <div class="card p-8 mb-8 fade-up delay-3">
+      <h2 class="text-xl font-semibold text-white mb-2">Side-by-Side</h2>
+      <p class="text-white/40 text-sm mb-6">Monthly income at each portfolio level.</p>
+
+      <div class="overflow-hidden rounded-xl border border-white/5">
+        <div class="grid grid-cols-4 bg-white/5 px-5 py-3">
+          <span class="text-[11px] text-white/30 uppercase tracking-wider">Portfolio MRR</span>
+          <span class="text-[11px] text-white/30 uppercase tracking-wider">Offer A</span>
+          <span class="text-[11px] text-white/30 uppercase tracking-wider">Offer B</span>
+          <span class="text-[11px] text-white/30 uppercase tracking-wider">Equity (B)</span>
+        </div>
+        <div class="compare-row grid grid-cols-4 px-5 py-3.5">
+          <span class="text-white/50 text-sm">$10,000</span>
+          <span class="text-white text-sm font-medium">$5,500</span>
+          <span class="text-white text-sm font-medium">$3,000</span>
+          <span class="text-white/30 text-sm">—</span>
+        </div>
+        <div class="compare-row grid grid-cols-4 px-5 py-3.5">
+          <span class="text-white/50 text-sm">$25,000</span>
+          <span class="text-white text-sm font-medium">$18,750</span>
+          <span class="text-white text-sm font-medium">$7,500</span>
+          <span class="highlight-b text-sm font-semibold">1.5%</span>
+        </div>
+        <div class="compare-row grid grid-cols-4 px-5 py-3.5">
+          <span class="text-white/50 text-sm">$50,000</span>
+          <span class="text-white text-sm font-medium">$45,000</span>
+          <span class="text-white text-sm font-medium">$32,500</span>
+          <span class="highlight-b text-sm font-semibold">4.0%</span>
+        </div>
+        <div class="compare-row grid grid-cols-4 px-5 py-3.5">
+          <span class="text-white/50 text-sm">$75,000</span>
+          <span class="text-white text-sm font-medium">$67,500</span>
+          <span class="text-white text-sm font-medium">$56,250</span>
+          <span class="highlight-b text-sm font-semibold">7.0%</span>
+        </div>
+        <div class="compare-row grid grid-cols-4 px-5 py-3.5">
+          <span class="text-white/50 text-sm">$100,000</span>
+          <span class="text-white text-sm font-medium">$90,000</span>
+          <span class="text-white text-sm font-medium">$80,000</span>
+          <span class="highlight-b text-sm font-bold">10.0%</span>
+        </div>
+        <div class="compare-row grid grid-cols-4 px-5 py-3.5 border-t border-white/10">
+          <span class="text-white/50 text-sm">$120,000+</span>
+          <span class="highlight-a text-sm font-bold">$108,000</span>
+          <span class="highlight-b text-sm font-bold">$96,000</span>
+          <span class="highlight-b text-sm font-bold">10.0%</span>
+        </div>
+      </div>
+      <p class="text-white/25 text-[11px] mt-3">Offer B pays less monthly in exchange for 10% equity — the gap is the cost of ownership.</p>
+    </div>
+
+    <!-- Equity value at exit -->
+    <div class="card offer-b p-8 mb-8 fade-up delay-4">
+      <h2 class="text-xl font-semibold text-white mb-2">What 10% Is Worth at Exit</h2>
+      <p class="text-white/40 text-sm mb-6">At $100k portfolio MRR, total company ARR is ~$1.92M.</p>
+
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-white/3 border border-white/5 rounded-2xl p-5 text-center">
+          <p class="text-[11px] text-white/30 uppercase tracking-wider mb-3">Conservative</p>
+          <p class="text-white/50 text-sm mb-1">3× ARR</p>
+          <p class="text-2xl font-bold highlight-b">$576k</p>
+          <p class="text-white/20 text-[10px] mt-2">$5.76M company</p>
+        </div>
+        <div class="bg-white/5 border border-[#7b9e87]/20 rounded-2xl p-5 text-center">
+          <p class="text-[11px] text-white/30 uppercase tracking-wider mb-3">Market Rate</p>
+          <p class="text-white/50 text-sm mb-1">5× ARR</p>
+          <p class="text-3xl font-bold highlight-b">$960k</p>
+          <p class="text-white/20 text-[10px] mt-2">$9.6M company</p>
+        </div>
+        <div class="bg-white/3 border border-white/5 rounded-2xl p-5 text-center">
+          <p class="text-[11px] text-white/30 uppercase tracking-wider mb-3">Strong Exit</p>
+          <p class="text-white/50 text-sm mb-1">7× ARR</p>
+          <p class="text-2xl font-bold highlight-b">$1.34M</p>
+          <p class="text-white/20 text-[10px] mt-2">$13.4M company</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center fade-up delay-4">
+      <p class="text-white/20 text-sm">Kimball Mueller · 2026</p>
+    </div>
+
+  </div>
+</body>
+</html>
